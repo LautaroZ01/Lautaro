@@ -48,12 +48,32 @@ export const Nav = () => {
         }
     }
 
+    const menuFunction = () => {
+        let navOpctions = window.document.getElementById('nav-none');
+        let navOpctions1 = window.document.getElementById('nav-none1');
+
+        if (navOpctions.classList[1] === 'nav-n') {
+            navOpctions.classList.remove('nav-n');
+            navOpctions.classList.add('nav-block');
+
+            navOpctions1.classList.remove('nav-n');
+            navOpctions1.classList.add('nav-block');
+        }
+        else {
+            navOpctions.classList.remove('nav-block');
+            navOpctions.classList.add('nav-n');
+
+            navOpctions1.classList.remove('nav-block');
+            navOpctions1.classList.add('nav-n');
+        }
+    }
+
     return (
         <header className="container-fluid header">
             <nav className="container nav">
                 <h3 className="logo"><a href="#home-me">LZ</a></h3>
 
-                <button className="nav-social nav-link" id="btn-menu">
+                <button className="nav-social nav-link" id="btn-menu" onClick={menuFunction}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width="24"
                         height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
                         strokeLinecap="round" strokeLinejoin="round">
