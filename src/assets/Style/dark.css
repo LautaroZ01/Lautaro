@@ -1,0 +1,56 @@
+/* Dark mode */
+.dark {
+    color: var(--text-d-200);
+
+    background-color: #000;
+}
+
+/* Nav */
+.dark .service-card,
+.dark .nav-link {
+    color: var(--text-d-100);
+}
+
+.dark .nav-center .nav-link:hover,
+.dark .titulo-list {
+    color: var(--primary-d-300);
+}
+
+.dark .nav-social,
+.dark .info-item svg {
+    color: var(--primary-d-200);
+}
+
+
+/* Nav */
+
+/* Home */
+
+.dark .home-avatar img{
+    filter: drop-shadow(0px 0px 10px var(--primary-d-200));
+}
+
+
+.dark .service-title svg,
+.dark .s-info{
+    color: var(--primary-d-200);
+}
+
+.dark .portfolio-badge{
+    background-color: var(--primaryT-d-200);
+    color: var(--primary-d-200);
+}
+
+.dark .btn-dowload,
+.dark .btn-about,
+.dark .timeline-step p,
+.dark .list-of-about span,
+.dark .btn-dowload:hover,
+.dark .btn-about:hover
+{
+    color: var(--text-d-200);
+}
+
+/* Home */
+
+/* Dark mode */
