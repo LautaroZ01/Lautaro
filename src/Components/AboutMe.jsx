@@ -3,6 +3,14 @@ import React from 'react'
 import user from '../assets/Images/user-circle.svg'
 
 export const AboutMe = () => {
+    const portFolio = () => {
+        window.location.href = '#my-portfolio';
+    }
+
+    const contacMe = () => {
+        window.location.href='#contact-me';
+    }
+
     return (
         <section className="container about" id="about-me"
             style={{ backgroundImage: `url(${user})` }}>
@@ -24,8 +32,8 @@ export const AboutMe = () => {
                         <p>Trabaje y estoy trabanjando en varios proyectos de paginas y aplicaciones webs.</p>
                     </div>
                     <div className="about-btns">
-                        <button className="btn-about">Contactame</button>
-                        <button className="btn-dowload">Portafolio</button>
+                        <button className="btn-about" onClick={contacMe}>Contactame</button>
+                        <button className="btn-dowload" onClick={portFolio}>Portafolio</button>
                     </div>
                 </section>
                 <section className="col-12 col-md-5 about-list">

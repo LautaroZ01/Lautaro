@@ -4,6 +4,10 @@ import { Facebook } from './Icons/Facebook'
 import { X } from './Icons/X'
 
 export const Home = () => {
+    const saberMas = () =>{
+        window.location.href='#about-me';
+    }
+
     return (
         <main className="container home" id="home-me">
             <div className="row">
@@ -28,7 +32,7 @@ export const Home = () => {
                     <div className="home-btns">
                         <div className="home-btn">
                             <button className="btn-dowload">Descargar CV</button>
-                            <button className="btn-about">Saber más</button>
+                            <button className="btn-about" onClick={saberMas}>Saber más</button>
                         </div>
                         <div className="home-a">
                             <a href="" className="nav-social nav-link">

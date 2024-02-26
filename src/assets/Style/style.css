@@ -211,6 +211,9 @@ body {
     gap: 5px;
 }
 
+.nav-end .nav-link{
+    padding: 5px;
+}
 
 .nav-social {
     padding: 5px;
@@ -233,6 +236,10 @@ body {
     background: var(--primaryG-d-100);
     color: var(--primary-d-300);
     transform: translateY(-5px);
+}
+
+.btn-link{
+    padding: 5px;
 }
 
 .btn-link:hover {
@@ -357,6 +364,10 @@ body {
 .home-a {
     display: flex;
     padding: 10px;
+}
+
+.home-a .nav-link{
+    padding: 5px;
 }
 
 .btn-dowload {
