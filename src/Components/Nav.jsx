@@ -114,7 +114,7 @@ export const Nav = () => {
                 <div className="nav-end nav-n" id="nav-none1">
                     <ul className="nav-links">
                         <li className="nav-item">
-                            <a href="#" className="nav-social nav-link">
+                            <a href="https://github.com/LautaroZ01" target='_blank' className="nav-social nav-link">
                                 <GitHub></GitHub>
                             </a>
                         </li>
