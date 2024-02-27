@@ -8,7 +8,7 @@ export const AboutMe = () => {
     }
 
     const contacMe = () => {
-        window.location.href='#contact-me';
+        window.location.href = '#contact-me';
     }
 
     return (
@@ -21,23 +21,25 @@ export const AboutMe = () => {
                         <h1><strong className="s-info">A</strong>cerca de Mi</h1>
                     </header>
                     <div className="about-more">
-                        <p>Estoy aquí para ser tu socio en el viaje tecnológico. Si están listos para llevar tu proyecto al
+                        <p>
+                            Estoy aquí para ser tu socio en el viaje tecnológico. Si están listos para llevar tu proyecto al
                             siguiente nivel o tienen alguna consulta o pregunta sobre este, estoy ansioso por hablar más a
-                            fondo.</p>
-                        <p>Apacionado por la programacion, actualmente me encuentro estudiando una Tecnicatura Universitaria
-                            en Programacion en la Universidad Nacional de Salta.
-                            Adicional a eso realice y estoy realizando diferentes cursos para ampliar mis conocimientos
-                            sobre la programacion y el desarrollo web.
+                            fondo.
                         </p>
-                        <p>Trabaje y estoy trabanjando en varios proyectos de paginas y aplicaciones webs.</p>
+                        <p>
+                            Apasionado por la programación, actualmente me encuentro estudiando la carrera Tecnicatura Universitaria en
+                            Programación en la Universidad Nacional de Salta.
+                            Además, estoy realizando cursos para ampliar mis conocimientos sobre la programación y el desarrollo web.
+                        </p>
+                        <p>Actualmente estoy trabajando en varios proyectos de páginas y aplicaciones webs.</p>
                     </div>
                     <div className="about-btns">
-                        <button className="btn-about" onClick={contacMe}>Contactame</button>
+                        <button className="btn-about" onClick={contacMe}>Contáctame</button>
                         <button className="btn-dowload" onClick={portFolio}>Portafolio</button>
                     </div>
                 </section>
                 <section className="col-12 col-md-5 about-list">
-                    <h2><strong className="s-info">I</strong>nformacion personal</h2>
+                    <h2><strong className="s-info">I</strong>nformación  personal</h2>
                     <div>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item list-of-about">
@@ -49,11 +51,11 @@ export const AboutMe = () => {
                                 <span>23</span>
                             </li>
                             <li className="list-group-item list-of-about">
-                                <strong className="titulo-list">Direccion:</strong>
+                                <strong className="titulo-list">Dirección:</strong>
                                 <span>Salta Capital, Salta, Argentina</span>
                             </li>
                             <li className="list-group-item list-of-about">
-                                <strong className="titulo-list">Telefono:</strong>
+                                <strong className="titulo-list">Teléfono:</strong>
                                 <span>3875192845</span>
                             </li>
                             <li className="list-group-item list-of-about">
@@ -114,7 +116,7 @@ export const AboutMe = () => {
                                         <div className="inner-circle"></div>
                                         <p className="h6 mt-3 mb-1"><span className="badge rounded-pill home-badge">Actual</span>
                                         </p>
-                                        <p className="h6 mb-0 mb-lg-0">Estudiando programacion</p>
+                                        <p className="h6 mb-0 mb-lg-0">Estudiando programación</p>
                                     </div>
                                 </div>
                             </div>
