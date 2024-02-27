@@ -8,7 +8,7 @@ export const Contact = () => {
                 <div class="row">
                     <div class="col-12 col-md-6 form-col form-info">
                         <header>
-                            <span class="badge rounded-pill home-badge">Contactame</span>
+                            <span class="badge rounded-pill home-badge">Contáctame</span>
                             <h1><strong class="s-info">M</strong>is Contactos</h1>
                         </header>
                         <section class="info-contact">
@@ -22,7 +22,7 @@ export const Contact = () => {
                                         d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
                                 </svg>
                                 <div class="info-more">
-                                    <span class="badge rounded-pill home-badge">Telefono</span>
+                                    <span class="badge rounded-pill home-badge">Teléfono</span>
                                     <p>3875192845</p>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ export const Contact = () => {
                                     <path d="M3 7l9 6l9 -6" />
                                 </svg>
                                 <div class="info-more">
-                                    <span class="badge rounded-pill home-badge">Correo electronico</span>
+                                    <span class="badge rounded-pill home-badge">Correo electrónico</span>
                                     <p>lautarozule80@gmail.com</p>
                                 </div>
                             </div>
@@ -51,8 +51,8 @@ export const Contact = () => {
                                 </svg>
 
                                 <div class="info-more">
-                                    <span class="badge rounded-pill home-badge">Direccion</span>
-                                    <p>Mi casa, Salta Capital, Salta, Argentina</p>
+                                    <span class="badge rounded-pill home-badge">Dirección </span>
+                                    <p>Salta Capital, Salta, Argentina</p>
                                 </div>
                             </div>
                         </section>
@@ -106,7 +106,7 @@ export const Contact = () => {
                     </div>
 
                     <div class="col-12 col-md-6 form-col form-data">
-                        <h2><strong class="s-info">E</strong>nvia tu consulta aqui</h2>
+                        <h2><strong class="s-info">E</strong>nvía tu consulta aquí </h2>
                         <form class="form" action="">
                             <div class="form-item">
                                 <input type="text" placeholder="Nombre"/>

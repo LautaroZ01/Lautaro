@@ -25,8 +25,8 @@ export const Home = () => {
                             </a>
                         </header>
                         <h2>Desarrollador <strong className="s-info">Web Full Stack</strong>. <span className="s-info2">De Salta,
-                            Argentina. </span> Especializado en Crear Paginas Webs
-                            interactivas y aplicaciones unicas.
+                            Argentina. </span> Especializado en Crear Páginas Webs
+                            interactivas y aplicaciones únicas.
                         </h2>
                     </div>
                     <div className="home-btns">

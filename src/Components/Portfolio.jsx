@@ -12,7 +12,8 @@ export const Portfolio = () => {
             <section className="row row-portfolio">
                 <div className="portofolio-desc">
                     <h3><strong className="s-info">D</strong>esarrollando proyectos</h3>
-                    <p>Actualmente me encuentro en el trabajo de desarrollar 
+                    <p>
+                        Actualmente me encuentro en el trabajo de desarrollar
                         proyectos para ampliar mis conocimientos.
                     </p>
                 </div>

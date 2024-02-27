@@ -13,7 +13,7 @@ export const Services = () => {
                     <div className="card service-card" id="service-1">
                         <div className="card-body service-body">
                             <header className="service-title">
-                                <h3 className="font-weight-medium"><strong className="s-info">P</strong>agina web</h3>
+                                <h3 className="font-weight-medium"><strong className="s-info">P</strong>ágina web </h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width="24"
                                     height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -24,7 +24,7 @@ export const Services = () => {
                                 </svg>
                             </header>
                             <p className="mt-3">
-                                Diseño y creo la pagina web de tus sueños. Con el mejor estilo que refleje tu vicion hacia
+                                Diseño y creo la página web de tus sueños. Con el mejor estilo que refleje tu visión hacia
                                 el mundo entero.
                             </p>
                             <div className="service-btn">
@@ -52,7 +52,7 @@ export const Services = () => {
                     <div className="card service-card" id="service-2">
                         <div className="card-body service-body">
                             <header className="service-title">
-                                <h3 className="font-weight-medium"><strong className="s-info">P</strong>agina web Dinamica</h3>
+                                <h3 className="font-weight-medium"><strong className="s-info">P</strong>ágina web Dinámica</h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width="24"
                                     height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -63,10 +63,9 @@ export const Services = () => {
                                 </svg>
                             </header>
                             <p className="mt-3">
-                                Haz que tu pagina cobre vida haciendo que tenga diferentes funcionalidades. Permitiendo que
-                                el
-                                usuario pueda interactuar con tu sitio web. Alojando el contenido de tu pagina en
-                                una base de datos segura y eficiente
+                                Haz que tu página cobre vida haciendo que tenga diferentes funcionalidades. Permitiendo que
+                                el usuario pueda interactuar con tu sitio web. Alojando el contenido de tu página en una base de
+                                datos segura y eficiente
                             </p>
                             <footer className="service-btn">
                                 <a href="" className="btn-service">Contratar</a>
@@ -90,7 +89,7 @@ export const Services = () => {
                     <div className="card service-card" id="service-3">
                         <div className="card-body service-body">
                             <header className="service-title">
-                                <h3 className="font-weight-medium"><strong className="s-info">D</strong>iseña tu Pagina Web</h3>
+                                <h3 className="font-weight-medium"><strong className="s-info">D</strong>iseña tu Página Web</h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width="24"
                                     height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -101,9 +100,9 @@ export const Services = () => {
                                 </svg>
                             </header>
                             <p className="mt-3">
-                                Haz una interfaz para que los usuarios puedan ver tu proyecto en internet. O quizas
-                                sientes que le falta algo de estilo o contenido a tu pagina web. Rediseñalo como mas te
-                                guste y haz que sea realidad.
+                                Haz una interfaz para que los usuarios puedan ver tu proyecto en internet. O quizás
+                                sientes que le falta algo de estilo o contenido a tu página web. Rediséñalo como más te guste y haz
+                                que sea realidad.
                             </p>
                             <div className="service-btn">
                                 <a href="" className="btn-service">Contratar</a>
