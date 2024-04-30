@@ -872,6 +872,10 @@ body {
     padding-top: 60px;
 }
 
+.skills{
+    margin: 60px auto;
+}
+
 .skills header {
     animation: scroll-animation-text linear both;
     animation-timeline: view();
@@ -914,6 +918,7 @@ body {
     justify-content: center;
 
     position: relative;
+    transition: all .25s;
 }
 
 .item-badge {
@@ -929,8 +934,6 @@ body {
     top: -40%;
     left: 50%;
     transform: translateX(-50%);
-
-    transition: all .25s;
 }
 
 .item-badge::after {
@@ -959,9 +962,9 @@ body {
 }
 
 .item-skill:hover .item-badge {
-    opacity: 1;
     display: block;
     transition: all .25s;
+    animation: scroll-animation-text .25s ease-out forwards;
 
 }
 
@@ -1068,6 +1071,7 @@ body {
 /* Contact */
 .contact {
     margin-bottom: 50px;
+    position: relative;
 }
 
 .contact header {
@@ -1165,6 +1169,55 @@ textarea {
     align-items: center;
     justify-content: flex-end;
     padding: 0px 15px;
+}
+
+.email-enviado{
+    position: absolute;
+    background-color: rgb(74, 255, 74);
+    color: #000;
+    gap: 15px;
+    bottom: -92vh;
+    right: 20px;
+    padding: 15px 10px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 20px var(--accent-d-200);
+    animation: scroll-animation-text .25s ease-out forwards;
+    display: none;
+}
+
+.email-no-enviado{
+    position: absolute;
+    background-color: rgb(252, 13, 13);
+    color: #000;
+    gap: 15px;
+    bottom: -92vh;
+    right: 20px;
+    padding: 15px 10px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 20px var(--accent-d-200);
+    animation: scroll-animation-text .25s ease-out forwards;
+    display: none;
+}
+
+.email-ready{
+    display: flex;
+    transition: all .25s;
+}
+
+.email-check{
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-not-check{
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Contact */

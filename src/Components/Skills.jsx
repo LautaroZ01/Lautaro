@@ -77,8 +77,8 @@ export const Skills = () => {
                     </div>
                 </div>
 
-                <div class="col-5 col-sm-7 skill-col">
-                    <div class="skills-items">
+                <div className="col-5 col-sm-7 skill-col">
+                    <div className="skills-items">
                         <article className="item-skill">
 
                             <div className="item-badge">
@@ -125,9 +125,9 @@ export const Skills = () => {
                     </div>
                 </div>
 
-                <div class="col-7 col-sm-7 skill-col">
+                <div className="col-7 col-sm-7 skill-col">
 
-                    <div class="skills-items">
+                    <div className="skills-items">
                         <article className="item-skill">
 
                             <div className="item-badge">
@@ -185,8 +185,8 @@ export const Skills = () => {
                     </div>
                 </div>
 
-                <div class="col-5 col-sm-5 skill-col">
-                    <div class="skills-items">
+                <div className="col-5 col-sm-5 skill-col">
+                    <div className="skills-items">
                         <article className="item-skill">
 
                             <div className="item-badge">

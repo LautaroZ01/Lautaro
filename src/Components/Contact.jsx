@@ -1,47 +1,93 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
+    const form = useRef();
+    const userEmai = useRef({
+        user: '',
+        emailUser: '',
+        mensaje: ''
+    })
+
+    const sendEmail = (e) => {
+        const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+        const btnEmail = document.getElementById('email-sund');
+        const btnEmailNot = document.getElementById('email-not-sund');
+
+        e.preventDefault();
+        let datos = e.target
+
+
+        emailjs.sendForm(
+            SERVICE_ID,
+            TEMPLATE_ID,
+            form.current, {
+            publicKey: PUBLIC_KEY,
+        }
+        ).then(
+            () => {
+                btnEmail.classList.add('email-ready')
+
+                setTimeout(() => {
+                    btnEmail.classList.remove('email-ready')
+                }, 3000)
+
+                datos.user_name.value = ''
+                datos.user_email.value = ''
+                datos.message.value = ''
+            },
+            (error) => {
+                btnEmailNot.classList.add('email-ready')
+                setTimeout(() => {
+                    btnEmailNot.classList.remove('email-ready')
+                }, 3000)
+            },
+        );
+    };
+
     return (
         <div>
-            <section class="container contact" id="contact-me">
+            <section className="container contact" id="contact-me">
 
-                <div class="row">
-                    <div class="col-12 col-md-6 form-col form-info">
+                <div className="row">
+                    <div className="col-12 col-md-6 form-col form-info">
                         <header>
-                            <span class="badge rounded-pill home-badge">Contáctame</span>
-                            <h1><strong class="s-info">M</strong>is Contactos</h1>
+                            <span className="badge rounded-pill home-badge">Contáctame</span>
+                            <h1><strong className="s-info">M</strong>is Contactos</h1>
                         </header>
-                        <section class="info-contact">
-                            <h2><strong class="s-info">I</strong>nfo</h2>
-                            <div class="info-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="48"
+                        <section className="info-contact">
+                            <h2><strong className="s-info">I</strong>nfo</h2>
+                            <div className="info-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-phone" width="48"
                                     height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path
                                         d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
                                 </svg>
-                                <div class="info-more">
-                                    <span class="badge rounded-pill home-badge">Teléfono</span>
+                                <div className="info-more">
+                                    <span className="badge rounded-pill home-badge">Teléfono</span>
                                     <p>3875192845</p>
                                 </div>
                             </div>
 
-                            <div class="info-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="48"
+                            <div className="info-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail" width="48"
                                     height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                                     <path d="M3 7l9 6l9 -6" />
                                 </svg>
-                                <div class="info-more">
-                                    <span class="badge rounded-pill home-badge">Correo electrónico</span>
+                                <div className="info-more">
+                                    <span className="badge rounded-pill home-badge">Correo electrónico</span>
                                     <p>lautarozule80@gmail.com</p>
                                 </div>
                             </div>
-                            <div class="info-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="48"
+                            <div className="info-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-map-pin" width="48"
                                     height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -50,16 +96,16 @@ export const Contact = () => {
                                         d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
                                 </svg>
 
-                                <div class="info-more">
-                                    <span class="badge rounded-pill home-badge">Dirección </span>
+                                <div className="info-more">
+                                    <span className="badge rounded-pill home-badge">Dirección </span>
                                     <p>Salta Capital, Salta, Argentina</p>
                                 </div>
                             </div>
                         </section>
-                        <section class="info-redes">
-                            <div class="info-a">
-                                <a href="" class="nav-social nav-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                        <section className="info-redes">
+                            <div className="info-a">
+                                <a href="" className="nav-social nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-instagram"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -69,8 +115,8 @@ export const Contact = () => {
                                         <path d="M16.5 7.5l0 .01" />
                                     </svg>
                                 </a>
-                                <a href="" class="nav-social nav-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                                <a href="" className="nav-social nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-facebook"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -78,8 +124,8 @@ export const Contact = () => {
                                     </svg>
                                 </a>
 
-                                <a href="" class="nav-social nav-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x"
+                                <a href="" className="nav-social nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-x"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -88,8 +134,8 @@ export const Contact = () => {
                                     </svg>
                                 </a>
 
-                                <a href="" class="nav-social nav-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                                <a href="" className="nav-social nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-linkedin"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -105,25 +151,25 @@ export const Contact = () => {
                         </section>
                     </div>
 
-                    <div class="col-12 col-md-6 form-col form-data">
-                        <h2><strong class="s-info">E</strong>nvía tu consulta aquí </h2>
-                        <form class="form" action="">
-                            <div class="form-item">
-                                <input type="text" placeholder="Nombre"/>
+                    <div className="col-12 col-md-6 form-col form-data">
+                        <h2><strong className="s-info">E</strong>nvía tu consulta aquí </h2>
+                        <form className="form" ref={form} onSubmit={sendEmail}>
+                            <div className="form-item">
+                                <input type="text" placeholder="Nombre" name='user_name' required />
                             </div>
-                            <div class="form-item">
-                                <input type="email" placeholder="Correo Electronico"/>
+                            <div className="form-item">
+                                <input type="email" placeholder="Correo Electronico" name='user_email' required />
                             </div>
-                            <div class="form-item">
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                            <div className="form-item">
+                                <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" required />
                             </div>
-                            <div class="form-btn">
-
-                                <button class="btn-dowload">Enviar</button>
+                            <div className="form-btn">
+                                <button className="btn-dowload">Enviar</button>
                             </div>
                         </form>
                     </div>
                 </div>
+
             </section>
         </div>
     )

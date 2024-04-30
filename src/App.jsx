@@ -21,21 +21,21 @@ function App() {
 
   return (
     <>
-      <Nav/>
+      <Nav />
 
-      <Home/>
+      <Home />
 
-      <AboutMe/>
+      <AboutMe />
 
-      <Portfolio/>
+      <Portfolio />
 
-      <Skills/>
+      <Skills />
 
-      <Services/>
+      {/* <Services/> */}
 
-      <Contact/>
+      <Contact />
 
-      <Footer/>
+      <Footer />
 
     </>
   )

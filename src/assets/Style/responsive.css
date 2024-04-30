@@ -25,6 +25,11 @@
         padding: 10px;
     }
 
+    .email-enviado{
+        display: none;
+        right: 40px;
+    }
+
     .nav-n{
         display: none;
     }

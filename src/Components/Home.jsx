@@ -4,8 +4,12 @@ import { Facebook } from './Icons/Facebook'
 import { X } from './Icons/X'
 
 export const Home = () => {
-    const saberMas = () =>{
-        window.location.href='#about-me';
+    const saberMas = () => {
+        window.location.href = '#about-me';
+    }
+
+    const dowloadCV = () => {
+        window.open('/src/assets/Post/CV Lautaro Nicolas Zuleta.pdf', '_blank');
     }
 
     return (
@@ -31,7 +35,7 @@ export const Home = () => {
                     </div>
                     <div className="home-btns">
                         <div className="home-btn">
-                            <button className="btn-dowload">Descargar CV</button>
+                            <button className="btn-dowload" onClick={dowloadCV}>Descargar CV</button>
                             <button className="btn-about" onClick={saberMas}>Saber más</button>
                         </div>
                         <div className="home-a">
@@ -49,15 +53,17 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="next"><a href="#about-me" className="btn-dowload btn-next">
-                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-player-track-next"
-                    width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
-                    strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M3 5v14l8 -7z" />
-                    <path d="M14 5v14l8 -7z" />
-                </svg>
-            </a></div>
+            <div className="next">
+                <a href="#about-me" className="btn-dowload btn-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-player-track-next"
+                        width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
+                        strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 5v14l8 -7z" />
+                        <path d="M14 5v14l8 -7z" />
+                    </svg>
+                </a>
+            </div>
         </main>
     )
 }
