@@ -11,6 +11,7 @@
     --primary-d-200: #ff983f;
     --primaryT-d-200: #ff983f44;
     --primary-d-300: #ffffa1;
+    --primaryD-d-300: #ffffa155;
     --accent-d-100: #F5F5F5;
     --accent-d-200: #929292;
     --text-d-100: #FFFFFF;
@@ -23,6 +24,7 @@
     --primary-l-200: #dda400;
     --primary-l-300: #916400;
     --accent-l-100: #03A9F4;
+    --accentD-l-100: #03A9F422;
     --accentT-l-100: #03A9F444;
     --accent-l-200: #004f90;
     --text-l-100: #212121;
@@ -211,7 +213,7 @@ body {
     gap: 5px;
 }
 
-.nav-end .nav-link{
+.nav-end .nav-link {
     padding: 5px;
 }
 
@@ -238,7 +240,7 @@ body {
     transform: translateY(-5px);
 }
 
-.btn-link{
+.btn-link {
     padding: 5px;
 }
 
@@ -289,6 +291,7 @@ body {
     filter: none;
     scale: 1.1;
     transform: translateY(-15px);
+    transform: rotate(15deg);
 }
 
 .home-info {
@@ -366,7 +369,7 @@ body {
     padding: 10px;
 }
 
-.home-a .nav-link{
+.home-a .nav-link {
     padding: 5px;
 }
 
@@ -464,6 +467,8 @@ body {
     animation: scroll-animation-text linear both;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
+    background-color: var(--accentD-l-100);
+    border-radius: 12px;
 }
 
 .about-list {
@@ -872,7 +877,7 @@ body {
     padding-top: 60px;
 }
 
-.skills{
+.skills {
     margin: 60px auto;
 }
 
@@ -1085,6 +1090,10 @@ body {
     justify-content: center;
 
     gap: 10px;
+
+    animation: scroll-animation-text linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
 }
 
 .form-data {
@@ -1109,6 +1118,10 @@ body {
     justify-content: center;
 
     gap: 15px;
+
+    animation: scroll-animation-text linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
 
 }
 
@@ -1171,7 +1184,7 @@ textarea {
     padding: 0px 15px;
 }
 
-.email-enviado{
+.email-enviado {
     position: absolute;
     background-color: rgb(74, 255, 74);
     color: #000;
@@ -1185,7 +1198,7 @@ textarea {
     display: none;
 }
 
-.email-no-enviado{
+.email-no-enviado {
     position: absolute;
     background-color: rgb(252, 13, 13);
     color: #000;
@@ -1199,12 +1212,12 @@ textarea {
     display: none;
 }
 
-.email-ready{
+.email-ready {
     display: flex;
     transition: all .25s;
 }
 
-.email-check{
+.email-check {
     border: solid 2px #000;
     border-radius: 50%;
     display: flex;
@@ -1212,7 +1225,7 @@ textarea {
     justify-content: center;
 }
 
-.email-not-check{
+.email-not-check {
     border: solid 2px #000;
     border-radius: 50%;
     display: flex;

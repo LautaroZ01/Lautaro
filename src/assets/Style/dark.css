@@ -41,6 +41,10 @@
     color: var(--primary-d-200);
 }
 
+.dark .about-info{
+    background-color: var(--primaryD-d-300);
+}
+
 .dark .btn-dowload,
 .dark .btn-about,
 .dark .timeline-step p,

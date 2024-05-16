@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import user from '../assets/Images/user-circle.svg'
 
 export const AboutMe = () => {
+    const year = new Date().getFullYear();
+    const [edad, setEdad] = useState(year - 2001)
     const portFolio = () => {
         window.location.href = '#my-portfolio';
     }
@@ -48,7 +50,7 @@ export const AboutMe = () => {
                             </li>
                             <li className="list-group-item list-of-about">
                                 <strong className="titulo-list">Edad:</strong>
-                                <span>23</span>
+                                <span>{edad}</span>
                             </li>
                             <li className="list-group-item list-of-about">
                                 <strong className="titulo-list">Dirección:</strong>

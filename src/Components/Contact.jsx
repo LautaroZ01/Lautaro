@@ -150,13 +150,13 @@ export const Contact = () => {
                         <h2><strong className="s-info">E</strong>nvía tu consulta aquí </h2>
                         <form className="form" ref={form} onSubmit={sendEmail}>
                             <div className="form-item">
-                                <input type="text" placeholder="Nombre" name='user_name' required />
+                                <input type="text" placeholder="Escribe tu Nombre" name='user_name' required />
                             </div>
                             <div className="form-item">
-                                <input type="email" placeholder="Correo Electronico" name='user_email' required />
+                                <input type="email" placeholder="Escribe tu Correo Electronico" name='user_email' required />
                             </div>
                             <div className="form-item">
-                                <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" required />
+                                <textarea name="message" id="" cols="30" rows="10" placeholder="Escribe tu Mensaje" required />
                             </div>
                             <div className="form-btn">
                                 <button className="btn-dowload">Enviar</button>
