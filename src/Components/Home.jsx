@@ -9,7 +9,7 @@ export const Home = () => {
     }
 
     const dowloadCV = () => {
-        window.open('/public/Post/CV Lautaro Nicolas Zuleta.pdf', '_blank');
+        window.open('/Post/CV Lautaro Nicolas Zuleta.pdf', '_blank');
     }
 
     return (
