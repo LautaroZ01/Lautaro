@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Portfolio = () => {
     return (
-        <section className="container portfolio" id="my-portfolio">
+        <section className="container portfolio observer" id="my-portfolio" dataObserverId='observer2'>
             <header className="portfolio-title">
                 <span className="badge rounded-pill home-badge">Desarrollo</span>
                 <h1><strong className="s-info">M</strong>is Proyectos</h1>

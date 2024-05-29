@@ -19,7 +19,7 @@ import { GitHub } from './Icons/GitHub'
 
 export const Skills = () => {
     return (
-        <section className="container skills" id="skills-me">
+        <section className="container skills observer" id="skills-me" dataObserverId='observer3'>
             <header>
                 <span className="badge rounded-pill home-badge">Conocimiento</span>
                 <h1><strong className="s-info">M</strong>is Habilidades</h1>

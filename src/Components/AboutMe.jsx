@@ -14,7 +14,7 @@ export const AboutMe = () => {
     }
 
     return (
-        <section className="container about" id="about-me"
+        <section className="container about observer" id="about-me" dataObserverId='observer1'
             style={{ backgroundImage: `url(${user})` }}>
             <div className="row">
                 <section className="col-12 col-md-7 about-info">

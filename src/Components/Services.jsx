@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Services = () => {
     return (
-        <section className="container service" id="service-me">
+        <section className="container service observer" id="service-me">
             <header>
                 <span className="badge rounded-pill home-badge">Lo que ofrezco</span>
                 <h1><strong className="s-info">M</strong>is Servicios</h1>

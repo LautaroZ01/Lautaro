@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { GitHub } from './Icons/GitHub';
 import { Linkedin } from './Icons/Linkedin';
 
 export const Nav = () => {
     const [darkMode, setDarkMode] = useState(false)
+    const [activeSection, setActiveSection] = useState('')
+    const sectionsRef = useRef({});
+
     useEffect(() => {
         const body = document.body;
         const btnMode = window.document.getElementById('btn-mode-dark');
+        observer();
 
         if (localStorage.getItem('modoOscuro') === 'enabled') {
             body.classList.add('dark');
@@ -75,6 +79,51 @@ export const Nav = () => {
         }
     }
 
+    const menuInteractive = () => {
+        let navOpctions = window.document.getElementById('nav-none');
+        let navOpctions1 = window.document.getElementById('nav-none1');
+
+        navOpctions.classList.remove('nav-block');
+        navOpctions.classList.add('nav-n');
+
+
+        navOpctions1.classList.remove('nav-block');
+        navOpctions1.classList.add('nav-n');
+
+    }
+
+    const observer = () => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.7
+        }
+
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const observerId = entry.target.getAttribute('dataObserverId');
+                    setActiveSection(observerId);
+                }
+            })
+        }
+
+        const observer = new IntersectionObserver(observerCallback, options);
+        const sections = document.querySelectorAll('.observer');
+
+        sections.forEach(section => {
+            observer.observe(section);
+            const observerId = section.getAttribute('dataObserverId');
+            sectionsRef.current[observerId] = section;
+        })
+
+        return () => {
+            sections.forEach(section => observer.unobserve(section));
+        }
+
+    }
+
+
     return (
         <header className="container-fluid header">
             <nav className="container nav">
@@ -94,19 +143,19 @@ export const Nav = () => {
                 <div className="nav-center nav-n" id="nav-none">
                     <ul className="nav-links">
                         <li className="nav-item">
-                            <a href="#about-me" className="nav-link">Sobre Mi</a>
+                            <a href="#about-me" onClick={menuInteractive} className={activeSection === 'observer1' ? 'nav-link nav-link-active' : 'nav-link'}>Sobre Mi</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#my-portfolio" className="nav-link">Portafolio</a>
+                            <a href="#my-portfolio" onClick={menuInteractive} className={activeSection === 'observer2' ? 'nav-link nav-link-active' : 'nav-link'}>Portafolio</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#skills-me" className="nav-link">Habilidades</a>
+                            <a href="#skills-me" onClick={menuInteractive} className={activeSection === 'observer3' ? 'nav-link nav-link-active' : 'nav-link'}>Habilidades</a>
                         </li>
+                        {/* <li className="nav-item">
+                            <a href="#service-me" onClick={menuInteractive} className="nav-link">Servicios</a>
+                        </li> */}
                         <li className="nav-item">
-                            <a href="#service-me" className="nav-link">Servicios</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#contact-me" className="nav-link">Contacto</a>
+                            <a href="#contact-me" onClick={menuInteractive} className={activeSection === 'observer4' ? 'nav-link nav-link-active' : 'nav-link'}>Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -119,7 +168,7 @@ export const Nav = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-social nav-link">
+                            <a href="https://www.linkedin.com/in/lautaro-zuleta-9a5642250/" target='_blank' className="nav-social nav-link">
                                 <Linkedin></Linkedin>
                             </a>
                         </li>

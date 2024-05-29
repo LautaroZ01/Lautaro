@@ -194,6 +194,7 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .nav-link {
@@ -203,6 +204,11 @@ body {
     transition: all .25s;
     animation: links-animation 1s;
     animation-fill-mode: forwards;
+}
+
+.nav-link-active{
+    border-bottom: solid 1px var(--accent-l-100);
+    color: var(--accent-l-100);
 }
 
 .nav-center .nav-link:hover {

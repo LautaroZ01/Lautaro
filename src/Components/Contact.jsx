@@ -44,7 +44,7 @@ export const Contact = () => {
 
     return (
         <div>
-            <section className="container contact" id="contact-me">
+            <section className="container contact observer" id="contact-me" dataObserverId='observer4'>
 
                 <div className="row">
                     <div className="col-12 col-md-6 form-col form-info">
