@@ -38,7 +38,7 @@ export const Home = () => {
                             <button className="btn-dowload" onClick={dowloadCV}>Descargar CV</button>
                             <button className="btn-about" onClick={saberMas}>Saber más</button>
                         </div>
-                        <div className="home-a">
+                        {/* <div className="home-a">
                             <a href="" className="nav-social nav-link">
                                 <Instagram></Instagram>
                             </a>
@@ -49,7 +49,7 @@ export const Home = () => {
                             <a href="" className="nav-social nav-link">
                                 <X></X>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

@@ -7,19 +7,6 @@ export const Nav = () => {
     const [activeSection, setActiveSection] = useState('')
     const sectionsRef = useRef({});
 
-    useEffect(() => {
-        const body = document.body;
-        const btnMode = window.document.getElementById('btn-mode-dark');
-        observer();
-
-        if (localStorage.getItem('modoOscuro') === 'enabled') {
-            body.classList.add('dark');
-            btnMode.innerHTML = SVGLight;
-        }
-
-
-    }, [])
-
     const SVGDark = `
     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-moon" width="24"
         height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -41,6 +28,30 @@ export const Nav = () => {
     </svg>  
     `
 
+    useEffect(() => {
+        const body = document.body;
+        const btnMode = window.document.getElementById('btn-mode-dark');
+        observer();
+
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        const savedMode = localStorage.getItem('modoOscuro');
+
+        if (savedMode === 'enabled' || (savedMode === null && prefersDarkMode)) {
+            setDarkMode(true);
+            body.classList.add('dark');
+            btnMode.innerHTML = SVGLight;
+        } else {
+            setDarkMode(false);
+            body.classList.remove('dark');
+            btnMode.innerHTML = SVGDark;
+        }
+
+
+    }, [])
+
+
+
     const darkModeFunction = () => {
         const body = document.body;
         const btnMode = window.document.getElementById('btn-mode-dark');
@@ -57,6 +68,7 @@ export const Nav = () => {
             body.classList.add('dark')
             btnMode.innerHTML = SVGLight;
         }
+
     }
 
     const menuFunction = () => {
@@ -96,7 +108,7 @@ export const Nav = () => {
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.7
+            threshold: 0.6
         }
 
         const observerCallback = (entries) => {

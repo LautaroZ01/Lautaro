@@ -408,7 +408,7 @@ body {
 .btn-about,
 .btn-dowload {
     border: none;
-    padding: 10px;
+    padding: 13px;
     border-radius: 10px;
 
     transition: all .25s;
@@ -1188,6 +1188,40 @@ textarea {
     align-items: center;
     justify-content: flex-end;
     padding: 0px 15px;
+    gap: 10px;
+}
+
+.link-contact{
+    color: var(--primary-d-100);
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    gap: 5px;
+
+    transition: all .25s;
+}
+.link-contact span{
+    border-left: solid 1px var(--primaryT-d-200);
+    padding: 0px 5px;
+}
+
+.link-contact:hover{
+    background-color: var(--primary-d-100);
+    color: var(--primary-d-300);
+    border-radius: 10px;
+    transform: translateY(-5px);
+}
+
+.copy-ready:hover{
+    color: #000;
+    background-color: rgb(74, 255, 74);
+}
+
+.copy-temp{
+    display: none;
 }
 
 .email-enviado {

@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Linkedin } from './Icons/Linkedin';
+import { Email } from './Icons/Email';
+import { Check } from './Icons/Check';
 
 export const Contact = () => {
     const form = useRef();
@@ -41,6 +44,29 @@ export const Contact = () => {
             },
         );
     };
+
+    const copyEmail = () => {
+        const btnEmail = document.getElementById('btn-copy-email');
+        const iconEmail = document.getElementById('copy-text-contact')
+        const iconCheck = document.getElementById('copy-check-correct')
+        const textToCopy = "lautarozule80@gmail.com";
+
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                btnEmail.classList.add('copy-ready')
+                iconEmail.classList.add('copy-temp')
+                iconCheck.classList.remove('copy-temp')
+
+                setTimeout(() => {
+                    btnEmail.classList.remove('copy-ready')
+                    iconEmail.classList.remove('copy-temp')
+                    iconCheck.classList.add('copy-temp')
+                }, 1000)
+            })
+            .catch(err => {
+                console.error('Error al copiar el texto: ', err);
+            });
+    }
 
     return (
         <div>
@@ -99,7 +125,7 @@ export const Contact = () => {
                         </section>
                         <section className="info-redes">
                             <div className="info-a">
-                                <a href="" className="nav-social nav-link">
+                                {/* <a href="" className="nav-social nav-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-instagram"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -109,17 +135,17 @@ export const Contact = () => {
                                         <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                                         <path d="M16.5 7.5l0 .01" />
                                     </svg>
-                                </a>
-                                <a href="" className="nav-social nav-link">
+                                </a> */}
+                                {/* <a href="" className="nav-social nav-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-facebook"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                         <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
                                     </svg>
-                                </a>
+                                </a> */}
 
-                                <a href="" className="nav-social nav-link">
+                                {/* <a href="" className="nav-social nav-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-x"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -127,20 +153,15 @@ export const Contact = () => {
                                         <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
                                         <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
                                     </svg>
-                                </a>
+                                </a> */}
+                                <button onClick={copyEmail} className="link-contact" id='btn-copy-email'>
+                                    <Email />
+                                    <Check />
+                                    <span >Correo electrónico</span>
+                                </button>
 
-                                <a href="" className="nav-social nav-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-linkedin"
-                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                                        <path d="M8 11l0 5" />
-                                        <path d="M8 8l0 .01" />
-                                        <path d="M12 16l0 -5" />
-                                        <path d="M16 16v-3a2 2 0 0 0 -4 0" />
-                                    </svg>
+                                <a href="https://www.linkedin.com/in/lautaro-zuleta-9a5642250" target='_blank' className="link-contact">
+                                    <Linkedin /> <span>Linkedin</span>
                                 </a>
                             </div>
                         </section>
