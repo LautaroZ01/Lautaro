@@ -16,6 +16,11 @@ import { Mongo } from './Lang/Mongo'
 import { Postgres } from './Lang/Postgres'
 import { Git } from './Lang/Git'
 import { GitHub } from './Icons/GitHub'
+import { Tailwind } from './Lang/Tailwind'
+import { Express } from './Lang/Express'
+import { IconVSCode } from './Lang/IconVSCode'
+import { Postman } from './Lang/Postman'
+import { Eclipse } from './Lang/Eclipse'
 
 export const Skills = () => {
     return (
@@ -25,7 +30,7 @@ export const Skills = () => {
                 <h1><strong className="s-info">M</strong>is Habilidades</h1>
             </header>
 
-            <section className="row skill-row text-center">
+            {/* <section className="row skill-row text-center">
                 <div className="col-7 col-sm-5 skill-col">
 
                     <div className="skills-items">
@@ -242,7 +247,230 @@ export const Skills = () => {
                         </article>
                     </div>
                 </div>
+            </section> */}
 
+            <section className="row skill-row text-center">
+                <section className="container-skills">
+                    <strong>Frontend</strong>
+                    <div className='list-skills'>
+                        <article className='article-skill'>
+                            <div className='icon-skill'>
+                                <HTML />
+                            </div>
+                            <div className='about-skill'>
+                                <strong>HTML</strong>
+                                <small>Estructura web</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill'>
+                                <Css />
+                            </div>
+                            <div className='about-skill'>
+                                <strong>CSS</strong>
+                                <small>Estilo web</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Js />
+                            </div>
+                            <div className='about-skill'>
+                                <strong>Javascript</strong>
+                                <small>Lenguaje web</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Ts />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Typescript</strong>
+                                <small>Lenguaje web</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <IconReact />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>ReactJS</strong>
+                                <small>Libreria UI</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Angular />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Angular</strong>
+                                <small>Framework</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon express-icon'>
+                                <Astro />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Astro</strong>
+                                <small>Sitio statico</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Bootstrap />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Boostrap</strong>
+                                <small>CSS Framework</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Tailwind />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Tailwind CSS</strong>
+                                <small>CSS Framework</small>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section className='container-skills'>
+                    <strong>Backend</strong>
+                    <div className='list-skills'>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Python />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Python</strong>
+                                <small>Machine Learning</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Java />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Java</strong>
+                                <small>POO</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <IconNode />
+                            </div>
+                            <div className='about-skill'>
+                                <strong>Node JS</strong>
+                                <small>JS Tool</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon express-icon'>
+                                <Express />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Express.js</strong>
+                                <small>REST APIs</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Django />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Django</strong>
+                                <small>Ph Framework</small>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section className='container-skills'>
+                    <strong>DataBases</strong>
+                    <div className='list-skills'>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Postgres />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>PostgreSQL</strong>
+                                <small>DB Relacional</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Mysql />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>MySQL</strong>
+                                <small>DB Relacional</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Mongo />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Mongo DB</strong>
+                                <small>DB No Relacional</small>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section className='container-skills'>
+                    <strong>Herramientas</strong>
+                    <div className='list-skills'>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <IconVSCode/>
+                            </div>
+                            <div className='about-skill '>
+                                <strong>VSCode</strong>
+                                <small>Tool</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <GitHub/>
+                            </div>
+                            <div className='about-skill '>
+                                <strong>GitHub</strong>
+                                <small>Repository</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Git/>
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Git</strong>
+                                <small>Tool</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Postman/>
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Postman</strong>
+                                <small>API Tool</small>
+                            </div>
+                        </article>
+                        <article className='article-skill'>
+                            <div className='icon-skill java-icon'>
+                                <Eclipse />
+                            </div>
+                            <div className='about-skill '>
+                                <strong>Eclipse</strong>
+                                <small>Java IDE</small>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </section>
 
         </section>

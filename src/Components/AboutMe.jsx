@@ -19,7 +19,7 @@ export const AboutMe = () => {
             <div className="row">
                 <section className="col-12 col-md-7 about-info">
                     <header className="about-titulo">
-                        <span className="badge rounded-pill home-badge">Programador</span>
+                        <span className="badge rounded-pill home-badge">Información</span>
                         <h1><strong className="s-info">A</strong>cerca de Mi</h1>
                     </header>
                     <div className="about-more">

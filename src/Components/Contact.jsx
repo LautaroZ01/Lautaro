@@ -75,7 +75,7 @@ export const Contact = () => {
                 <div className="row">
                     <div className="col-12 col-md-6 form-col form-info">
                         <header>
-                            <span className="badge rounded-pill home-badge">Contáctame</span>
+                            <span className="badge rounded-pill home-badge">Contacto</span>
                             <h1><strong className="s-info">M</strong>is Contactos</h1>
                         </header>
                         <section className="info-contact">

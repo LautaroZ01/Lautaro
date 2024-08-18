@@ -62,4 +62,15 @@
 
 /* Home */
 
+/* Skill */
+.dark .about-skill small{
+    color: var(--textT-d-100);
+}
+
+.dark .express-icon svg{
+    fill: #fff;
+}
+
+/* Skill */
+
 /* Dark mode */

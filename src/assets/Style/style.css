@@ -15,6 +15,7 @@
     --accent-d-100: #F5F5F5;
     --accent-d-200: #929292;
     --text-d-100: #FFFFFF;
+    --textT-d-100: #FFFFFF77;
     --text-d-200: #e0e0e0;
     --bg-d-100: #1D1F21;
     --bg-d-200: #2c2e30;
@@ -206,7 +207,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-.nav-link-active{
+.nav-link-active {
     border-bottom: solid 1px var(--accent-l-100);
     color: var(--accent-l-100);
 }
@@ -896,9 +897,9 @@ body {
 .skill-row {
     padding: 10px;
     padding-top: 30px;
-
 }
 
+/* 
 .skill-col {
     border-radius: 15px;
     display: flex;
@@ -977,7 +978,74 @@ body {
     transition: all .25s;
     animation: scroll-animation-text .25s ease-out forwards;
 
+} */
+
+.container-skills {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: solid 1px var(--primaryT-d-200);
+    padding: 10px;
+    gap: 50px;
+    margin-bottom: 20px;
+    cursor: default;
+
+    animation: scroll-animation-text linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 12%;
 }
+
+.container-skills > strong{
+    width: 10%;
+    text-align: left;
+}
+
+.list-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-grow: 1;
+    max-width: 70%;
+    height: auto;
+}
+
+.article-skill {
+    display: flex;
+    flex-basis: 180px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 25px;
+    border-radius: 13px;
+
+    transition: all .25s;
+}
+
+.article-skill:hover {
+    background-color: var(--primaryT-d-200);
+}
+
+.icon-skill {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.java-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.about-skill {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: small;
+}
+
+.about-skill small {
+    color: var(--bgT-d-100);
+    min-width: 95px;
+}
+
 
 /* Skills */
 
@@ -1191,7 +1259,7 @@ textarea {
     gap: 10px;
 }
 
-.link-contact{
+.link-contact {
     color: var(--primary-d-100);
     border: none;
     background-color: transparent;
@@ -1203,24 +1271,25 @@ textarea {
 
     transition: all .25s;
 }
-.link-contact span{
+
+.link-contact span {
     border-left: solid 1px var(--primaryT-d-200);
     padding: 0px 5px;
 }
 
-.link-contact:hover{
+.link-contact:hover {
     background-color: var(--primary-d-100);
     color: var(--primary-d-300);
     border-radius: 10px;
     transform: translateY(-5px);
 }
 
-.copy-ready:hover{
+.copy-ready:hover {
     color: #000;
     background-color: rgb(74, 255, 74);
 }
 
-.copy-temp{
+.copy-temp {
     display: none;
 }
 
